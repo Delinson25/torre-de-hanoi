@@ -1,23 +1,26 @@
 #include <stdio.h>
 
-int mayor(int pesos, int dolares)// Creacion de la variable en enteros, pesos y dolares
-{
+int main(void) {// Punto de entrada al programa
+  int edad = 0;//Creacion de variable y asignacion de edad
+  int fecha =0;//Creacion de variable y asignacion de fecha
 
-  dolares = (dolares * 58);// Operación que multiplica 1 dolar por lo que pale en pesos
-  if(pesos > dolares)
-  {
-    return pesos;
-    }
-  else{
-    return dolares;
-// Condicion con operación relacional, si pesos es mayor que dolares, opera la funcion de devolver la cantidad pesos a la pantalla, y else si no se cumple, devuelva la cantidad dolares
-  
+printf("Cual es tu fecha de nacimiento: " );//Imprime una informacion en la pantalla
+  scanf("%d" , &fecha);// Pide un dato
+  edad = 2022 - fecha; // Resta la fecha actual con la edad puesta
+ if (edad < 0)// condicion de menor de cero
+ {
+ printf("Tu edad es: %d Menor de cero", edad );// imprime la condicion menor de cero
+} else if (edad >110)// condicion de mayor que 110
+ { 
+
+ printf("Tu edad es: %d Mayor de 110, edad falsa", edad );// Imprime la condicion de edad falsa
+} else if (edad >= 18)// condicion mayor o igual que 18
+{
+printf("Tu edad es: %d Puedes pasar", edad );//Imprime la condicion de mayor o igual que 18, puedes pasar
 }
-  }
-int main(void) {// Inicia el programa
-int numero = 0;// Creacion de variable numero
-  numero = mayor(1000,10);// Asignacion de cantidad a las variables
-  printf("%d\n", numero);// imprime la información en la pantalla
-  
-  return 0;// Termina el programa
-}
+else{// si no se cumple ninguna de las condiciones anteriores, se ejecuta esta
+  printf("Tu edad es: %d NO Puedes pasar", edad );
+}//Imprime la condicion de menor o de 18, no puedes pasar
+
+return 0;//termina la ejecución de una función
+} 
